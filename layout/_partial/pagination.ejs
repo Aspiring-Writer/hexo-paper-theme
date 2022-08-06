@@ -1,0 +1,20 @@
+<% if (page.total > 1){ %>
+<nav class="row flex-center">
+  <% if (page.prev){ %>
+    <div class="sm-4 col">
+      <a class="paper-btn" href="<%- config.root %><%- page.prev_link %>">
+        <i class='fa-solid fa-angles-left'></i>
+        Previous
+      </a>
+    </div>
+  <% } %>
+  <% if (page.next){ %>
+    <div class="sm-4 col">
+      <a class="paper-btn" href="<%- config.root %><%- page.next_link %>">
+        Next
+        <i class='fa-solid fa-angles-right'></i>
+      </a>
+    </div>
+  <% } %>
+</nav>
+<% } %>

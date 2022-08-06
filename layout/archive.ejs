@@ -1,0 +1,17 @@
+<%
+  var title = '';
+  if (page.category) title = page.category;
+  if (page.tag) title = page.tag;
+  if (page.archive){
+    if (page.year) title = page.year + (page.month ? ' > ' + page.month : '');
+    else title = "Archives";
+  }
+%>
+
+<header class="text-center">
+  <h1><%- titlecase(title) %></h1>
+</header>
+
+<%- partial('_partial/posts-list') %>
+
+<%- partial('_partial/pagination') %>

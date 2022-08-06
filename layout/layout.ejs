@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <%- partial('_partial/head') %>
+  <body>
+    <%- partial('_partial/navbar') %>
+    <div id="top" class="row">
+      <div class="sm-12 md-8 col">
+        <div class="paper">
+          <main class="container">
+            <%- body %>
+
+            <div class="to-top">
+              <a href="#top" class="paper-btn margin">
+                <i class='fa-solid fa-angle-up'></i>
+              </a>
+            </div>
+          </main>
+        </div>
+      </div>
+
+      <div class="sm-12 md-4 col">
+
+        <div class="paper text-center">
+          <% if (theme.gravatar) { %>
+          <img src="<%- gravatar(theme.gravatar, 500) %>" alt="Gravatar" />
+          <% } else { %>
+          <img src="<%- theme.avatar %>" alt="Avatar" />
+          <% } %>
+          <h4><%- config.author %></h4>
+          <% if (theme.location) { %>
+          <h5>
+            <i class="fa-solid fa-location-dot"></i>
+            <%- theme.location %>
+          </h5>
+          <% } %> <% if (theme.bio) { %>
+          <p><%- theme.bio %></p>
+          <% } %>
+
+          <div class="row flex-center">
+            <div class="col-2 col">
+              <i class="fa-solid fa-chart-line"></i>
+              <%- symbolsCountTotal(site) %>
+            </div>
+            <div class="col-2 col">
+              <i class="fa-solid fa-mug-saucer"></i>
+              <%- symbolsTimeTotal(site) %>
+            </div>
+          </div>
+          
+        </div>
+
+        <div class="paper">
+          <div class="row flex-center">
+            <% if (site.categories.length){ %>
+            <h3><%= __('Categories') %></h3>
+            <%- list_categories({
+              transform(str) {
+                return titlecase(str);
+              }
+            }) %>
+            <% } %>
+          </div>
+        </div>
+
+        <div class="paper">
+          <div class="row flex-center">
+            <% if (site.tags.length) { %>
+            <h3><%= __('TagCloud') %></h3>
+            <p><%- tagcloud({min_font: 15, max_font: 30}) %></p>
+            <% } %>
+          </div>
+        </div>
+
+        <div class="paper">
+          <%- list_archives({type: 'yearly'}) %>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

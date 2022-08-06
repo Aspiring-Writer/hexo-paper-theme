@@ -1,0 +1,11 @@
+<article class="article">
+  <% page.posts.each(function (post) { %>
+  <h3><%= post.title %></h3>
+  <%- partial('_partial/post-meta', page=post) %>
+  <%- post.excerpt %>
+
+  <div class="row">
+    <a class="paper-btn" href="<%- url_for(post.path) %>">Read More</a>
+  </div>
+  <% }) %>
+</article>

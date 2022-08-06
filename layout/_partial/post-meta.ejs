@@ -1,0 +1,27 @@
+<p class="article-meta">
+  <span>
+    Posted on 
+    <i class="fa-regular fa-calendar"></i>
+    <%- full_date(page.date, 'dddd, MMMM Do YYYY') %>
+  </span>
+  <% if (page.updated) { %>
+  <span>
+    Edited on 
+    <i class="fa-regular fa-calendar-check"></i>
+    <%- full_date(page.updated, 'dddd, MMMM Do YYYY') %>
+  </span>
+  <% } %>
+  <% if (page.categories && page.categories.length){ %>
+    <i class="fa-regular fa-folder"></i>
+    <% var categories = []; page.categories.forEach(function(category){
+    categories.push('<a href="' + config.root + category.path + '">' + category.name + '</a>'); }); %>
+    <span class="text-capitalize"><%- categories.join(' > ') %></span>
+  <% } %>
+  <span>
+    <i class="fa-regular fa-file-word"></i>
+    <%- symbolsCount(page) %> words ≈ 
+    <i class="fa-regular fa-clock"></i>
+    <%- symbolsTime(page) %>
+  </span>
+  
+</p>
