@@ -1,14 +1,12 @@
 <p class="article-meta">
   <span>
-    Posted on 
     <i class="fa-regular fa-calendar"></i>
-    <%- full_date(page.date, 'dddd, MMMM Do YYYY') %>
+    Posted on <%- full_date(page.date, 'dddd, MMMM Do YYYY') %>
   </span>
   <% if (page.updated) { %>
   <span>
-    Edited on 
     <i class="fa-regular fa-calendar-check"></i>
-    <%- full_date(page.updated, 'dddd, MMMM Do YYYY') %>
+    Edited on <%- full_date(page.updated, 'dddd, MMMM Do YYYY') %>
   </span>
   <% } %>
   <% if (page.categories && page.categories.length){ %>

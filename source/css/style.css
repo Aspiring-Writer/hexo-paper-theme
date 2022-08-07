@@ -101,8 +101,12 @@ nav .nav-brand span {
 .article-meta span {
   padding-right: 1em;
 }
+.article-footer section {
+  padding-top: 25px;
+}
 
 .text-capitalize { text-transform: capitalize; }
+.text-right { text-align: right; }
 
 .toc-container .collapsible { width: 100%; }
 @media only screen and (min-width: 768px) {
