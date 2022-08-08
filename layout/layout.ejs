@@ -72,7 +72,11 @@
         </div>
 
         <div class="paper">
-          <%- list_archives({type: 'yearly'}) %>
+          <% if (config.archive_generator.monthly != false) { %>
+            <%- list_archives() %>
+          <% } else { %>
+            <%- list_archives({type: 'yearly'}) %>
+          <% } %>
         </div>
       </div>
     </div>
