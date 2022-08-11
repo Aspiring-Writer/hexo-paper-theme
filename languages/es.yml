@@ -1,0 +1,12 @@
+index:
+  title: Casa
+  read_more: Lee Mas
+  categories: Categorías
+  tags: Etiquetas
+  archive: Archivo
+  toc: Contenido
+  count: palabras
+
+nav:
+  prev: Anterior
+  next: Siguiente

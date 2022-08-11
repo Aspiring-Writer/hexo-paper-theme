@@ -1,6 +1,6 @@
 # Hexo Paper Theme
 
-To use this theme, copy and fill out the following variables into `_config.paper.yml`. Then, change your theme in `_config.yml` to paper.
+To use this theme, copy and fill out the following variables into `_config.paper.yml`. Then, change your theme to `theme: paper` in `_config.yml`.
 
 ```yml
 location: "Somewhere in the USA"
@@ -12,17 +12,49 @@ menu:
   Github: https://github.com/Aspiring-Writer
 ```
 
+## Favicons
+
+Generate your favicons using [a favicon generator](https://favicon.io) and add them to your `source/images/favicons` folder.
+
+This theme has support for:
+
+* apple-touch-icon.png
+* favicon-32x32.png
+* favicon-16x16.png
+* favicon.png
+* favicon.ico
+* logo.svg
+
+## Languages
+
+* en
+* es
+* ja
+* ko
+* ru
+* zh-cn
+* zh-tw
+
+If you have multiple languages, you can also change your site title to match whatever language the user has specified by adding `LANG_title` to your `config.paper.yml`. You can add a title for all of the supported languages if you'd like.
+
+```yml
+en_title: "Site"
+es_title: "Sitio"
+```
+
+The same goes for location and bio. Make sure you don't remove `location: "Here"` and `bio: "Blah blah blah"`, those should be in your default language and they _must_ be present.
+
 ## toc
 
-To add a toc to your post, add `toc: true` to the front-matter
+To add a Table of Contents to your post, add `toc: true` to the front-matter
 
 ## diff.blog
 
-[diff.blog](https://diff.blog/) is a similiar to Medium, but it's only for showing blog feeds, not hosting them. On their website, they advertise themselves as "a platform that helps you discover and follow amazing developer blogs. Whether your interests are in Python, Rust, AI, Distributed Systems or XYZ diff.blog has got amazing blogs for you to follow!"
+[diff.[blog](https://diff.blog/) is similar to Medium, but it's only for showing blog feeds, not hosting them. On their website, they advertise themselves as "a platform that helps you discover and follow amazing developer blogs. Whether your interests are in Python, Rust, AI, Distributed Systems or XYZ diff.blog has got amazing blogs for you to follow!"
 
 You can check out more on their [about page](https://diff.blog/FAQ/).
 
-You can use diff.blog with this theme by adding `diff_blog: CODE` to your theme config file. You can find your code by going [here](https://dif.blog/plugin/) and copying the 50-character code.
+You can use diff.blog with this theme by adding `diff_blog: CODE` to your theme config file. You can find your plugin code by going [here](https://dif.blog/plugin/) and copying the 50-character code.
 
 ```javascript
 <script id="diffblog-plugin-script" async="false" src="https://diff.blog/static/js/diffblog_plugin_v1.js"></script> 
@@ -50,7 +82,7 @@ utterances:
 
 ## Prev/Next Posts
 
-This is entirely optional, but quite useful for those who write series. You could also use Hexo's post helper tags, but this method is designed to be easier for those on mobile devices (and just lazy, of course).
+This is entirely optional but quite useful for those who write series. You could also use Hexo's post helper tags, but this method is designed to be easier for those on mobile devices (and just lazy, of course).
 
 ```yml
 prev_post: post1

@@ -1,0 +1,12 @@
+index:
+  title: 家。
+  read_more: 閱讀更多。
+  categories: 類別。
+  tags: 標籤。
+  archive: 檔案。
+  toc: 目錄。
+  count: 字。
+
+nav:
+  prev: 上一頁。
+  next: 下一個。

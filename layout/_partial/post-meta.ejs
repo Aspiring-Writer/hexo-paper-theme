@@ -1,12 +1,12 @@
 <p class="article-meta">
   <span>
     <i class="fa-regular fa-calendar"></i>
-    Posted on <%- full_date(page.date, 'dddd, MMMM Do YYYY') %>
+    <%- full_date(page.date, 'dddd, MMMM Do YYYY') %>
   </span>
   <% if (page.updated) { %>
   <span>
     <i class="fa-regular fa-calendar-check"></i>
-    Edited on <%- full_date(page.updated, 'dddd, MMMM Do YYYY') %>
+    <%- full_date(page.updated, 'dddd, MMMM Do YYYY') %>
   </span>
   <% } %>
   <% if (page.categories && page.categories.length){ %>
@@ -17,7 +17,7 @@
   <% } %>
   <span>
     <i class="fa-regular fa-file-word"></i>
-    <%- symbolsCount(page) %> words ≈ 
+    <%- symbolsCount(page) %> <%= __('index.count') %> ≈ 
     <i class="fa-regular fa-clock"></i>
     <%- symbolsTime(page) %>
   </span>

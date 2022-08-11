@@ -4,14 +4,14 @@
     <div class="sm-4 col">
       <a class="paper-btn" href="<%- config.root %><%- page.prev_link %>">
         <i class='fa-solid fa-angles-left'></i>
-        Previous
+        <%= __('nav.prev') %>
       </a>
     </div>
   <% } %>
   <% if (page.next){ %>
     <div class="sm-4 col">
       <a class="paper-btn" href="<%- config.root %><%- page.next_link %>">
-        Next
+        <%= __('nav.next') %>
         <i class='fa-solid fa-angles-right'></i>
       </a>
     </div>

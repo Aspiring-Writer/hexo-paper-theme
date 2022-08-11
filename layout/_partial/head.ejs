@@ -4,15 +4,19 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
   <%- meta_generator() %>
+  <%- open_graph() %>
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16.png">
+  <link rel="icon" type="image/png" href="/images/favicons/favicon.png">
+  <link rel="icon" href="/images/favicons/favicon.ico">
   <link rel="mask-icon" href="/images/favicons/logo.svg" color="#222">
   <link rel="manifest" href="/manifest.json">
 
   <%- css('css/paper.min.css') %>
   <%- css('css/style.css') %>
   <title><% if (page.title) { %><%= page.title %> | <% } %><%= config.title %></title>
+
   <script src="https://kit.fontawesome.com/42f6f50d63.js" crossorigin="anonymous"></script>
 </head>

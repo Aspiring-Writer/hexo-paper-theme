@@ -1,6 +1,24 @@
 <nav class="border split-nav">
   <div class="nav-brand">
-    <span><a href="<%- url_for() %>"><%- config.title %></a></span>
+    <span><a href="<%- url_for() %>">
+      <% if (config.language == 'en' && config.en_title) { %>
+        <%- config.en_title %>
+      <% } else if (config.language == 'es' && config.es_title) { %>
+        <%- config.es_title %>
+      <% } else if (config.language == 'ja' && config.ja_title) { %>
+        <%- config.ja_title %>
+      <% } else if (config.language == 'ko' && config.ko_title) { %>
+        <%- config.ko_title %>
+      <% } else if (config.language == 'ru' && config.ru_title) { %>
+        <%- config.ru_title %>
+      <% } else if (config.language == 'zh-cn' && config.zh-cn_title) { %>
+        <%- config.zh-cn_title %>
+      <% } else if (config.language == 'zh-tw' && config.zh-tw_title) { %>
+        <%- config.zh-tw_title %>
+      <% } else { %>
+        <%- config.title %>
+      <% } %>
+    </a></span>
   </div>
   <div class="collapsible">
     <input id="collapsible1" type="checkbox" name="collapsible1" />

@@ -1,6 +1,6 @@
 <header class="text-center">
   <h1>
-    <% if (is_home) { %>Home<% } else { %> <%= page.title %> <% } %>
+    <% if (is_home) { %><%= __('index.title') %><% } else { %> <%= page.title %> <% } %>
   </h1>
   <% if (page.subtitle) { %>
   <h3><%= page.subtitle %></h3>

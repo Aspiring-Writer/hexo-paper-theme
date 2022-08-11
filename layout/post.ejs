@@ -8,7 +8,7 @@
   <div class="row toc-container">
     <div class="collapsible">
       <input id="collapsible" type="checkbox" name="collapsible">
-      <label for="collapsible">TOC</label>
+      <label for="collapsible"><%= __('index.toc') %></label>
       <div class="collapsible-body">
         <%- toc(page.content, {list_number: false}) %>
       </div>
@@ -48,10 +48,10 @@
       <% if (page.prev_post) { %>
       <a class="paper-btn" href="<%- page.prev_post %>">
         <i class='fa-solid fa-angles-left'></i>
-        Previous
+        <%= __('nav.prev') %>
       </a> <% } %> <% if (page.next_post) { %>
       <a class="paper-btn" href="<%- page.next_post %>">
-        Next
+        <%= __('nav.next') %>
         <i class='fa-solid fa-angles-right'></i>
       </a> <% } %>
     </div>

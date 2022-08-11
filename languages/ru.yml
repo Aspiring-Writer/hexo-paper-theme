@@ -1,0 +1,12 @@
+index:
+  title: Дом
+  read_more: Читать далее
+  categories: Категории
+  tags: Теги
+  archive: Архивы
+  toc: Содержание
+  count: слова
+
+nav:
+  prev: Предыдущая
+  next: Следующий

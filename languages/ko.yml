@@ -1,0 +1,12 @@
+index:
+  title: 집
+  read_more: 더 읽어보세요
+  categories: 카테고리
+  tags: 태그
+  archive: 아카이브
+  toc: 목차
+  count: 말
+
+nav:
+  prev: 이전
+  next: 다음

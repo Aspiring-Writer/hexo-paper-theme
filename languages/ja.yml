@@ -1,0 +1,12 @@
+index:
+  title: ホーム。
+  read_more: 続きを読む。
+  categories: カテゴリー。
+  tags: タグ。
+  archive: アーカイブ。
+  toc: 目次。
+  count: 言葉。
+
+nav:
+  prev: 前。
+  next: 次。

@@ -3,9 +3,8 @@
   <h3><%= post.title %></h3>
   <%- partial('_partial/post-meta', page=post) %>
   <%- post.excerpt %>
-
   <div class="row">
-    <a class="paper-btn" href="<%- url_for(post.path) %>">Read More</a>
+    <a class="paper-btn" href="<%- url_for(post.path) %>"> <%= __('index.read_more') %> </a>
   </div>
   <% }) %>
 </article>

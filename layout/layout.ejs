@@ -30,10 +30,44 @@
           <% if (theme.location) { %>
           <h5>
             <i class="fa-solid fa-location-dot"></i>
-            <%- theme.location %>
+            <% if (config.language == 'en' && theme.en_location) { %>
+              <%- theme.en_location %>
+            <% } else if (config.language == 'es' && theme.es_location) { %>
+              <%- theme.es_location %>
+            <% } else if (config.language == 'ja' && theme.ja_location) { %>
+              <%- theme.ja_location %>
+            <% } else if (config.language == 'ko' && theme.ko_location) { %>
+              <%- theme.ko_location %>
+            <% } else if (config.language == 'ru' && theme.ru_location) { %>
+              <%- theme.ru_location %>
+            <% } else if (config.language == 'zh-cn' && theme.zh-cn_location) { %>
+              <%- theme.zh-cn_location %>
+            <% } else if (config.language == 'zh-tw' && theme.zh-tw_location) { %>
+              <%- theme.zh-tw_location %>
+            <% } else { %>
+              <%- config.location %>
+            <% } %>
           </h5>
           <% } %> <% if (theme.bio) { %>
-          <p><%- theme.bio %></p>
+          <p>
+            <% if (config.language == 'en' && theme.en_bio) { %>
+              <%- theme.en_bio %>
+            <% } else if (config.language == 'es' && theme.es_bio) { %>
+              <%- theme.es_bio %>
+            <% } else if (config.language == 'ja' && theme.ja_bio) { %>
+              <%- theme.ja_bio %>
+            <% } else if (config.language == 'ko' && theme.ko_bio) { %>
+              <%- theme.ko_bio %>
+            <% } else if (config.language == 'ru' && theme.ru_bio) { %>
+              <%- theme.ru_bio %>
+            <% } else if (config.language == 'zh-cn' && theme.zh-cn_bio) { %>
+              <%- theme.zh-cn_bio %>
+            <% } else if (config.language == 'zh-tw' && theme.zh-tw_bio) { %>
+              <%- theme.zh-tw_bio %>
+            <% } else { %>
+              <%- config.bio %>
+            <% } %>
+          </p>
           <% } %>
 
           <div class="row flex-center">
@@ -49,29 +83,26 @@
           
         </div>
 
+        <% if (site.categories.length){ %>
         <div class="paper">
-          <div class="row flex-center">
-            <% if (site.categories.length){ %>
-            <h3><%= __('Categories') %></h3>
-            <%- list_categories({
-              transform(str) {
-                return titlecase(str);
-              }
-            }) %>
-            <% } %>
-          </div>
+          <h3 class="text-center"><%= __('index.categories') %></h3>
+          <%- list_categories({
+            transform(str) {
+              return titlecase(str);
+            }
+          }) %>
         </div>
+        <% } %>
+
+        <% if (site.tags.length) { %>
+        <div class="paper">
+          <h3 class="text-center"><%= __('index.tags') %></h3>
+          <p><%- tagcloud({min_font: 15, max_font: 30}) %></p>
+        </div>
+        <% } %>
 
         <div class="paper">
-          <div class="row flex-center">
-            <% if (site.tags.length) { %>
-            <h3><%= __('TagCloud') %></h3>
-            <p><%- tagcloud({min_font: 15, max_font: 30}) %></p>
-            <% } %>
-          </div>
-        </div>
-
-        <div class="paper">
+          <h3 class="text-center"><%= __('index.archive') %></h3>
           <% if (config.archive_generator.monthly != false) { %>
             <%- list_archives() %>
           <% } else { %>

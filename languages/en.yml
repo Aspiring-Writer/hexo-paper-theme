@@ -1,0 +1,12 @@
+index:
+  title: Home
+  read_more: Read More
+  categories: Categories
+  tags: Tagcloud
+  archive: Archives
+  toc: TOC
+  count: words
+
+nav:
+  prev: Previous
+  next: Next

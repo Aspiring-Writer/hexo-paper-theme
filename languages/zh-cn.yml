@@ -1,0 +1,12 @@
+index:
+  title: 家。
+  read_more: 阅读更多。
+  categories: 类别。
+  tags: 标签。
+  archive: 档案。
+  toc: 目录。
+  count: 话。
+
+nav:
+  prev: 上一个。
+  next: 下一个。
