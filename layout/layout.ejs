@@ -45,7 +45,7 @@
             <% } else if (config.language == 'zh-tw' && theme.zh-tw_location) { %>
               <%- theme.zh-tw_location %>
             <% } else { %>
-              <%- config.location %>
+              <%- theme.location %>
             <% } %>
           </h5>
           <% } %> <% if (theme.bio) { %>
@@ -65,7 +65,7 @@
             <% } else if (config.language == 'zh-tw' && theme.zh-tw_bio) { %>
               <%- theme.zh-tw_bio %>
             <% } else { %>
-              <%- config.bio %>
+              <%- theme.bio %>
             <% } %>
           </p>
           <% } %>
