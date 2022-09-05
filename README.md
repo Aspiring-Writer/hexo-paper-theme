@@ -1,16 +1,12 @@
 # Hexo Paper Theme
 
-To use this theme, copy and fill out the following variables into `_config.paper.yml`. Then, change your theme to `theme: paper` in `_config.yml`.
+## Installation
 
-```yml
-location: "Somewhere in the USA"
-gravatar: "example@example.com"
-bio: "A short bio"
+`git clone https://github.com/Aspiring-Writer/hexo-paper-theme themes/paper`
 
-menu:
-  About Me: /about.html
-  Github: https://github.com/Aspiring-Writer
-```
+## Usage
+
+To use this theme, copy [the theme's config.yml](https://raw.githubusercontent.com/Aspiring-Writer/hexo-paper-theme/master/_config.yml) into your site folder. Then, change your theme to `theme: paper` in your site's `_config.yml`.
 
 ## Favicons
 
@@ -43,6 +39,10 @@ es_title: "Sitio"
 ```
 
 The same goes for location and bio. Make sure you don't remove `location: "Here"` and `bio: "Blah blah blah"`, those should be in your default language and they _must_ be present.
+
+## Word Count
+
+If you want include site and post word counts, install hexo-word-counter, `npm install hexo-word-counter`.
 
 ## toc
 

@@ -70,16 +70,19 @@
           </p>
           <% } %>
 
-          <div class="row flex-center">
-            <div class="col-2 col">
-              <i class="fa-solid fa-chart-line"></i>
-              <%- symbolsCountTotal(site) %>
+          <% if (theme.symbols_count_time) { %>
+           <div class="row flex-center">
+              <div class="col-2 col">
+                <i class="fa-solid fa-chart-line"></i>
+                <%- symbolsCountTotal(site) %>
+              </div>
+              <div class="col-2 col">
+                <i class="fa-solid fa-mug-saucer"></i>
+                <%- symbolsTimeTotal(site) %>
+              </div>
             </div>
-            <div class="col-2 col">
-              <i class="fa-solid fa-mug-saucer"></i>
-              <%- symbolsTimeTotal(site) %>
-            </div>
-          </div>
+          <% } %>
+          
           
         </div>
 
