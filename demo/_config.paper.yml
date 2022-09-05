@@ -1,0 +1,24 @@
+location: "Somewhere in the USA"
+gravatar: "yolson@liberty.edu"
+bio: "Christian. Programmer. Student. Aspiring Writer."
+
+menu:
+  Blog: https://aspiring-writer.github.io
+  Github: https://github.com/Aspiring-Writer
+
+symbols_count_time:
+  symbols: true
+  time: true
+  total_symbols: true
+  total_time: true
+  awl: 4
+  wpm: 275
+
+diff_blog: "q7f864hffi8m218eaq6d623sezfgkz1vzfva4oxjeyxq9l2dwp"
+
+utterances:
+  repo: Aspiring-Writer/hexo-paper-theme # Github repository owner and name
+  # Available values: pathname | url | title | og:title
+  issue_term: pathname
+  # Available values: github-light | github-dark | preferred-color-scheme | github-dark-orange | icy-dark | dark-blue | photon-dark | boxy-light
+  theme: preferred-color-scheme
