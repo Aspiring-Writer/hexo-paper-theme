@@ -98,12 +98,33 @@ nav .nav-brand span {
 
   margin-left: 0.5em;
 }
+h1, h2, h3 { text-shadow: 2px 2px 25px var(--muted); }
+
 .article-meta span {
   padding-right: 1em;
 }
-.article-footer section {
-  padding-top: 25px;
+blockquote {
+  padding: 20px 30px 20px 30px;
+  margin: 25px auto;
+  border: 2px solid #41403e;
+  border-color: var(--primary);
+  border-bottom-left-radius: 15px 255px;
+  border-bottom-right-radius: 225px 15px;
+  border-top-left-radius: 255px 15px;
+  border-top-right-radius: 15px 225px;
+  box-shadow: 13px 13px 0 0,
+              15px 15px 0 0,
+              15px 11px 0 0,
+              11px 15px 0 0;
 }
+cite {
+  padding-top: 15px;
+  display: block;
+  font-style: italic;
+  text-align: right;
+}
+cite::before { content: "― "; }
+.article-footer section {  padding-top: 25px; }
 
 .text-capitalize { text-transform: capitalize; }
 .text-right { text-align: right; }
@@ -116,8 +137,14 @@ nav .nav-brand span {
     max-width: 50%;
   }
   .card {
-    width: 40%;
+    max-width: 315px;
+    margin: 0 25px 25px 0;
     float: left;
-    margin-right: 25px;
+  }
+  blockquote {
+    width: 50%;
+    max-width: 500px;
+    margin: 25px;
+    float: right;
   }
 }
