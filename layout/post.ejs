@@ -3,11 +3,11 @@
     <h1 class="article-title"><%- page.title %></h1>
     <%- partial('_partial/post-meta') %>
   </div>
-  
+
   <% if (page.toc) { %>
   <div class="row toc-container">
     <div class="collapsible">
-      <input id="collapsible" type="checkbox" name="collapsible">
+      <input id="collapsible" type="checkbox" name="collapsible" />
       <label for="collapsible"><%= __('index.toc') %></label>
       <div class="collapsible-body">
         <%- toc(page.content, {list_number: false}) %>
@@ -16,29 +16,21 @@
   </div>
   <% } %> <% if (page.card) { %>
   <div class="card">
-    <img src="<%- page.card.poster %>" alt="Poster">
-  
+    <img src="<%- page.card.poster %>" alt="Poster" />
+
     <div class="card-body">
       <h4 class="card-title"><%- page.card.title %></h4>
       <h5 class="card-subtitle"><%- page.card.released %></h5>
-      <p class="card-text">
-        <%- page.card.details %>
-      </p>
+      <p class="card-text"><%- page.card.details %></p>
       <a class="paper-btn" href="<%- page.card.more %>">More</a>
     </div>
   </div>
-  <% } %>
-
-  <%- page.content %>
-
-  <% if (page.tags && page.tags.length){ %>
-    <% var tags = [];
-      page.tags.forEach(function(tag){
-        tags.push('<a href="' + config.root + tag.path + '">#' + tag.name + '</a>');
-      }); %>
-      <p class="text-right">
-        <%- tags.join(' ') %>
-      </p>
+  <% } %> <%- page.content %> <% if (page.tags && page.tags.length){ %> <% var
+  tags = []; page.tags.forEach(function(tag){ tags.push('<a
+    href="' + config.root + tag.path + '"
+    >#' + tag.name + '</a
+  >'); }); %>
+  <p class="text-right"><%- tags.join(' ') %></p>
   <% } %>
 </article>
 
@@ -47,27 +39,42 @@
     <div class="text-center">
       <% if (page.prev_post) { %>
       <a class="paper-btn" href="<%- page.prev_post %>">
-        <i class='fa-solid fa-angles-left'></i>
+        <i class="fa-solid fa-angles-left"></i>
         <%= __('nav.prev') %>
-      </a> <% } %> <% if (page.next_post) { %>
+      </a>
+      <% } %> <% if (page.next_post) { %>
       <a class="paper-btn" href="<%- page.next_post %>">
         <%= __('nav.next') %>
-        <i class='fa-solid fa-angles-right'></i>
-      </a> <% } %>
+        <i class="fa-solid fa-angles-right"></i>
+      </a>
+      <% } %>
     </div>
   </section>
 
-  <% if (theme.diff_blog) { %>
+  <% if (page.related_posts && page.related_posts.length > 0) { %>
   <section>
-    <script id="diffblog-plugin-script" async="false" src="https://diff.blog/static/js/diffblog_plugin_v1.js"></script> 
+    <h2>Related posts</h2>
+    <ul>
+      <% for (const path of page.related_posts) { %> <% const url =
+      url_for(path) %> <% if (url) { %>
+      <li><a href="<%= url %>"><%= url %></a></li>
+      <% } %> <% } %>
+    </ul>
+  </section>
+  <% } %> <% if (theme.diff_blog) { %>
+  <section>
+    <script
+      id="diffblog-plugin-script"
+      async="false"
+      src="https://diff.blog/static/js/diffblog_plugin_v1.js"
+    ></script>
     <script>
-      document.getElementById("diffblog-plugin-script").addEventListener("load", function () {
-        DiffBlog(
-          "<%- theme.diff_blog %>"
-        );
-      });
+      document
+        .getElementById("diffblog-plugin-script")
+        .addEventListener("load", function () {
+          DiffBlog("<%- theme.diff_blog %>");
+        });
     </script>
   </section>
-  <% } %>
-  <%- partial('_partial/comments') %>
+  <% } %> <%- partial('_partial/comments') %>
 </div>
